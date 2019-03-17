@@ -1,0 +1,132 @@
+2019-03-16 21:39:49,718 - __main__ - INFO - Start
+2019-03-16 21:45:13,236 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:45:13,237 - __main__ - INFO - phrase error,the origin tag is: <td allvita="" class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('B" ph.="">
+              B"ALLVITA              </td>
+2019-03-16 21:45:22,833 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:45:22,835 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','0.5">
+              BD PRECISION GLIDE              </td>
+2019-03-16 21:45:22,836 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:45:22,838 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','1">
+              BD PRECISION GLIDE              </td>
+2019-03-16 21:45:22,838 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:45:22,839 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','1.5">
+              BD PRECISION GLIDE              </td>
+2019-03-16 21:45:32,130 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:45:32,132 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" o="" onclick="javascript:open_popup_medicine('BIOCID ">
+              BIOCID "O"              </td>
+2019-03-16 21:46:49,938 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:46:49,938 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DELTA-LITE CONF.','','J.&amp;J.','5" yds="">
+              DELTA-LITE CONF.              </td>
+2019-03-16 21:46:49,939 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:46:49,939 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DELTA-LITE CONF.','','J.&amp;J.','4" yds="">
+              DELTA-LITE CONF.              </td>
+2019-03-16 21:47:17,825 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,826 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4" x12="">
+              DURALITE              </td>
+2019-03-16 21:47:17,826 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,827 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4" x15="">
+              DURALITE              </td>
+2019-03-16 21:47:17,827 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,828 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5" x12="">
+              DURALITE              </td>
+2019-03-16 21:47:17,828 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,829 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4" x24="">
+              DURALITE              </td>
+2019-03-16 21:47:17,829 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,830 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5" x15="">
+              DURALITE              </td>
+2019-03-16 21:47:17,831 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,831 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5" x18="">
+              DURALITE              </td>
+2019-03-16 21:47:17,832 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:47:17,832 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5" x24="">
+              DURALITE              </td>
+2019-03-16 21:48:07,736 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:48:07,737 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('GANGADHAR CHURNA " vriddha="">
+              GANGADHAR CHURNA "VRIDDHA"              </td>
+2019-03-16 21:52:42,559 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:52:42,559 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" j.="" onclick="javascript:open_popup_medicine('DELTA-LITE','TAPE','J.&amp;J.','* 4Y'
+              ,'N.I.">
+              DELTA-LITE              </td>
+2019-03-16 21:52:42,559 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:52:42,560 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" j.="" onclick="javascript:open_popup_medicine('DELTA-LITE','TAPE','J.&amp;J.','* 4Y'
+              ,'N.I.">
+              DELTA-LITE              </td>
+2019-03-16 21:52:42,569 - __main__ - INFO - finished
+2019-03-16 21:58:38,097 - __main__ - INFO - Start
+2019-03-16 21:58:38,837 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "C:/Users/11046/Desktop/python/py鰾單/medicine/india.py", line 87, in visit_detail_page
+    item.append(table['onclick'].replace(',','').split('\'')[index])
+IndexError: list index out of range
+2019-03-16 21:58:38,838 - __main__ - INFO - phrase error,the origin tag is: <td av.="" biphasic="" cartridges="" class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" human="" insulin="" ip="" onclick="javascript:open_popup_medicine('INSUMAN RAPID " preparations="" sus.="" zinc="">
+              INSUMAN RAPID "3 CARTRIDGES              </td>
+2019-03-16 21:58:38,840 - __main__ - INFO - finished
