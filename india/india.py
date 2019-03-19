@@ -2,17 +2,15 @@ import requests
 import mongoLink
 import random
 import logging
-
+from httputil import get_response,return_soup
 from engine import workshop,base_task
 
+logger = logging.getLogger(__name__)
+logger.setLevel(level=logging.DEBUG)
 
 origin_url = 'http://www.way2healthcare.com/way2medicine'
 front_url = 'http://www.way2healthcare.com/'
 
-
-
-logger = logging.getLogger(__name__)
-logger.setLevel(level=logging.DEBUG)
 
 # Formatter
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -45,11 +43,11 @@ def check_next_page(soup):
             # print(front_url+guide['href'])
             return front_url+guide['href']
     return False
-		
+        
 # should use url_list[6] for the test
-	
+    
 def deal(html):
-	soup = return_soup(html)
+    soup = return_soup(html)
     tables = soup.select('#no-more-tables > table > tbody > tr > .cur_poi')
     for table in tables:
         try:
@@ -57,7 +55,8 @@ def deal(html):
             while index <= 15:
                 item.append(table['onclick'].replace(',','').split('\'')[index])
                 index+=2
-            mongoLink.save(*item)
+            #mongoLink.save(*item)
+            print(*item)
             item = []
         except Exception:
             item = []
@@ -75,48 +74,48 @@ def deal(html):
 #
 
 class india_task(base_task):
-	def __init__(self,url,*args,*kw):
-		self.url = url
-		super(india_task,self).__init__(*args,**kw)
-		
-	def run(self):
-		item =[]
-		html = get_response(self.url)
-		if not html:
-			logger.error('failed to requests: '+self.url)
-			self.ws.add_task(india_task(self.url))
-			return False
-		succeed = deal(html)
-		if succeed:
-			next = check_next_page(soup)
-			self.ws.add_task
-		return succeed
-		
-	def retry(self):
-		print('now dealing with '+url)
-		# print(url)
-		item =[]
-		html = get_response(url)
-		if not html:
-			logger.error('failed to requests: '+url)
-			return False
-		succeed = deal(html)
-		if succeed:
-			next = check_next_page(soup)
-			self.ws.add_task
-		return succeed		
+    def __init__(self,url,*args,**kw):
+        self.url = url
+        super(india_task,self).__init__(*args,**kw)
+        
+    def run(self):
+        item =[]
+        html = get_response(self.url)
+        if not html:
+            logger.error('failed to requests: '+self.url)
+            self.ws.add_task(india_task(self.url))
+            return False
+        succeed = deal(html)
+        if succeed:
+            next = check_next_page(soup)
+            self.ws.add_task
+        return succeed
+        
+    def retry(self):
+        print('now dealing with '+url)
+        # print(url)
+        item =[]
+        html = get_response(url)
+        if not html:
+            logger.error('failed to requests: '+url)
+            return False
+        succeed = deal(html)
+        if succeed:
+            next = check_next_page(soup)
+            self.ws.add_task
+        return succeed      
 
 def sleep_time():
-	return random.randint(2,5)
-	
+    return random.randint(2,5)
+    
 def main():
     total_urls_list = get_detail_url(get_response(origin_url))
-	ws = workshop(1,sleep_time)
-	for i in total_urls_list:
-		ws.add_task(india_task(i,ws))
+    ws = workshop(1,sleep_time)
+    for i in total_urls_list:
+        ws.add_task(india_task(i,ws),0)
     ws.run()
 
-    logger.info('these should be figure out: ' + str(retry_url_list))
+    logger.info('these should be figure out: ' + str(ws.failed_queue))
 #retry_timeout('http://www.way2healthcare.com/way2medicine?&per_page=135')
 
     logger.info('finished')

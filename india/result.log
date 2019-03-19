@@ -130,3 +130,16 @@ IndexError: list index out of range
 2019-03-16 21:58:38,838 - __main__ - INFO - phrase error,the origin tag is: <td av.="" biphasic="" cartridges="" class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" human="" insulin="" ip="" onclick="javascript:open_popup_medicine('INSUMAN RAPID " preparations="" sus.="" zinc="">
               INSUMAN RAPID "3 CARTRIDGES              </td>
 2019-03-16 21:58:38,840 - __main__ - INFO - finished
+2019-03-19 09:33:49,637 - __main__ - INFO - Start
+2019-03-19 09:35:00,757 - __main__ - INFO - Start
+2019-03-19 09:35:45,592 - __main__ - INFO - Start
+2019-03-19 09:37:20,959 - __main__ - INFO - Start
+2019-03-19 09:39:39,328 - __main__ - INFO - Start
+2019-03-19 09:40:29,903 - __main__ - INFO - Start
+2019-03-19 09:40:43,783 - __main__ - INFO - Start
+2019-03-19 09:41:49,731 - __main__ - INFO - Start
+2019-03-19 09:43:09,276 - __main__ - INFO - Start
+2019-03-19 09:43:45,154 - __main__ - INFO - Start
+2019-03-19 09:43:46,576 - __main__ - INFO - these should be figure out: []
+2019-03-19 09:43:46,576 - __main__ - INFO - finished
+2019-03-19 09:44:35,715 - __main__ - INFO - Start
