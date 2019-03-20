@@ -76,13 +76,13 @@ class india_task(base_task):
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
-            self.ws.add_task(india_task(self.url))
+            self.ws.add_task(india_task(self.url,this.ws))
             return False
         succeed = deal(html)
         if succeed:
             next = check_next_page(soup)
             if next!=False:
-                self.ws.add_task(india_task(next),0)
+                self.ws.add_task(india_task(next,this.ws),0)
         return succeed
         
     def retry(self):
@@ -97,7 +97,7 @@ class india_task(base_task):
         if succeed:
             next = check_next_page(soup)
             if next!=False:
-                self.ws.add_task(india_task(next),0)
+                self.ws.add_task(india_task(next,this.ws),0)
         return succeed      
 
 def sleep_time():
