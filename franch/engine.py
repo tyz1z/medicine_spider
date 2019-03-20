@@ -60,19 +60,19 @@ class workshop(object):
             
 class worker(Thread):
     def __init__(self,ws,*args,**kw):
-        print("workerInit")
+        #print("workerInit")
         self.ws = ws
         super(worker,self).__init__(*args,**kw)
         
     def run(self):
-        print("workerRun")
+        #print("workerRun")
         while True:
             sleep(self.ws.sleep_func())
             if not self.ws.__stop__:
                 current_task,task_type = False,False
                 try:
                     current_task,task_type = self.ws.get_task()
-                    print("workerGotTask")
+                    #print("workerGotTask")
                 except Exception as e:
                     print(e)
                     
