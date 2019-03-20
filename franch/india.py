@@ -76,7 +76,7 @@ class india_task(base_task):
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
-            self.ws.add_task(india_task(self.url,this.ws))
+            self.ws.add_task(india_task(self.url,this.ws),0)
             return False
         succeed = deal(html)
         if succeed:
