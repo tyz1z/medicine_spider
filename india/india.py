@@ -57,9 +57,10 @@ def deal(html):
             for i in result[0]:
                 i = i.replace(' ','').replace('\n','').replace('\t','').replace('\r','')
             #print(result[0])
-            #mongoLink.save(*item)
-            print(*result[0])
-        except Exception:
+            mongoLink.save(*result[0])
+            #print(*result[0])
+        except Exception as e:
+            print(e)
             logger.error('phrase error',exc_info=True)
             logger.info('phrase error,the origin tag is: '+str(table))
             return False
@@ -71,7 +72,6 @@ class india_task(base_task):
         super(india_task,self).__init__(*args,**kw)
         
     def run(self):
-        item =[]
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
@@ -91,7 +91,7 @@ def main():
         #print(i+1)
         ws.add_task(india_task(i+1,ws),0)
     #ws.check()
-    ws.set_test_mode(2)
+    #ws.set_test_mode(2)
     ws.run()
     
     logger.info('these should be figure out: ' + str(ws.failed_queue))

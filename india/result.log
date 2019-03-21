@@ -218,3 +218,571 @@ NameError: name 'item' is not defined
 2019-03-21 20:06:41,125 - __main__ - INFO - Start
 2019-03-21 20:06:41,127 - __main__ - INFO - these should be figure out: []
 2019-03-21 20:06:41,127 - __main__ - INFO - finished
+2019-03-21 20:11:10,322 - __main__ - INFO - Start
+2019-03-21 20:11:10,324 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:11:10,324 - __main__ - INFO - finished
+2019-03-21 20:12:08,878 - __main__ - INFO - Start
+2019-03-21 20:12:08,880 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:12:08,880 - __main__ - INFO - finished
+2019-03-21 20:12:15,485 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:15,486 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:12:20,629 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:20,630 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:12:28,271 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:28,272 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AIRTEC FB 400 INH','','Glenmark','1 UNIT'
+              ,'-','N.I','N.I.','352.00');">
+              AIRTEC FB 400 INH              </td>
+2019-03-21 20:12:35,180 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:35,181 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AMINOGEST ','CAP','Zuventus','10'
+              ,'-','N.I','-','51.00');">
+              AMINOGEST               </td>
+2019-03-21 20:12:39,762 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:39,763 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('APCIL 625','TAB','Juggat','10*6'
+              ,'-','N.I','-','1230.00');">
+              APCIL 625              </td>
+2019-03-21 20:12:45,816 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:45,817 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ATOREM-20','TAB','NEMI PH.','-'
+              ,'-','N.I','-','-');">
+              ATOREM-20              </td>
+2019-03-21 20:12:52,536 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:52,536 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AZITHRIN 250','TAB','INNOVATIVE REM.','6'
+              ,'-','N.I','-','99.00');">
+              AZITHRIN 250              </td>
+2019-03-21 20:12:58,677 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:12:58,678 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('BETHADOXIN 12M','SYR','Biological','220 ML'
+              ,'-','N.I','-','59.95');">
+              BETHADOXIN 12M              </td>
+2019-03-21 20:13:03,434 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:03,435 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('BONE-C ','TAB','MOLEKULE','15'
+              ,'-','N.I','-','120.00');">
+              BONE-C               </td>
+2019-03-21 20:13:11,107 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:11,108 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('CALSUNATE-DSP KIT','TAB','Calibar Ph.','-'
+              ,'-','N.I','-','-');">
+              CALSUNATE-DSP KIT              </td>
+2019-03-21 20:13:18,980 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:26,758 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:26,759 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('CEPOTIN ','SYP','STANFORD LABS','30ML'
+              ,'-','N.I','-','43.90');">
+              CEPOTIN               </td>
+2019-03-21 20:13:31,524 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:31,525 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('CITRILON 5 LTR','','ATRA PH','5LTR'
+              ,'-','N.I','-','');">
+              CITRILON 5 LTR              </td>
+2019-03-21 20:13:36,132 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:36,132 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('C-MAX-100 DT','TAB','PARAMOUNT HC.','10'
+              ,'-','N.I','-','70.00');">
+              C-MAX-100 DT              </td>
+2019-03-21 20:13:42,885 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:13:42,886 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('CRICH 100 ','CAP','WANBURY','BLISTER'
+              ,'-','N.I','-','104.00');">
+              CRICH 100               </td>
+2019-03-21 20:14:04,831 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=16
+2019-03-21 20:14:27,461 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=17
+2019-03-21 20:14:49,989 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=18
+2019-03-21 20:14:54,840 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:14:54,840 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DTO','TAB','Dwd','10'
+              ,'-','N.I','-','65.00');">
+              DTO              </td>
+2019-03-21 20:15:01,280 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:01,281 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('EMBIXIME-100 DT','','UMBILICAL PH.','10'
+              ,'-','N.I','-','38.00');">
+              EMBIXIME-100 DT              </td>
+2019-03-21 20:15:11,537 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:11,538 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ESLIFY 200','TAB','Torrent','10'
+              ,'-','N.I','-','80.00');">
+              ESLIFY 200              </td>
+2019-03-21 20:15:26,566 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:26,567 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('FALCURE','INJ','TECHYON BIO.','1*3'
+              ,'-','N.I','-','85.00');">
+              FALCURE              </td>
+2019-03-21 20:15:35,385 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:35,385 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('FITGEL MOUTH ULCER','','J.B.Chem.','TUBE 15 GM'
+              ,'-','N.I','-','42.00');">
+              FITGEL MOUTH ULCER              </td>
+2019-03-21 20:15:44,489 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:44,490 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('FORMOX CV ','SYR','IP HC.','30ML'
+              ,'-','N.I','-','48.00');">
+              FORMOX CV               </td>
+2019-03-21 20:15:53,234 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:15:53,235 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('GESNIM 200','TAB','Aarpik Ph.','10*10'
+              ,'-','N.I','-','240.00');">
+              GESNIM 200              </td>
+2019-03-21 20:16:06,744 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:16:06,745 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('GUMEEZ','','Astrum Hc.','30 GMS'
+              ,'-','N.I','-','33.75');">
+              GUMEEZ              </td>
+2019-03-21 20:16:16,009 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:16:16,010 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('HIMRON-Z','DPS','Unitech Ph.','30ML'
+              ,'-','N.I','-','38.00');">
+              HIMRON-Z              </td>
+2019-03-21 20:16:34,572 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:16:34,572 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('IMMUGROW ','DPS','Corona','30ML'
+              ,'-','N.I','-','49.00');">
+              IMMUGROW               </td>
+2019-03-21 20:16:45,407 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:16:45,408 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('IST','SR TAB','ANHOX HC.','10'
+              ,'-','N.I','-','38.00');">
+              IST              </td>
+2019-03-21 20:17:16,333 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=30
+2019-03-21 20:17:25,470 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:17:25,471 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('LC-OD PLUS 5MG + 10MG','','Pfizer','10'
+              ,'-','N.I','-','59.00');">
+              LC-OD PLUS 5MG + 10MG              </td>
+2019-03-21 20:17:44,868 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=32
+2019-03-21 20:17:51,980 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:17:51,980 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('LIQUI D3','CAP','Troikaa','4'
+              ,'-','N.I','-','100.00');">
+              LIQUI D3              </td>
+2019-03-21 20:18:01,395 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:18:01,396 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('LUMIGAN 0.01 %','','Allergan','VIAL'
+              ,'-','N.I','-','375.00');">
+              LUMIGAN 0.01 %              </td>
+2019-03-21 20:18:09,205 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:18:09,205 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('MAXUM','TAB','ERIS THER.','10'
+              ,'-','N.I','-','75.00');">
+              MAXUM              </td>
+2019-03-21 20:18:26,334 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=36
+2019-03-21 20:18:47,339 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=37
+2019-03-21 20:18:53,144 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:18:53,144 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('MOXTIF','EYE DPS','Cadila Hc.','5ML'
+              ,'-','N.I','-','82.00');">
+              MOXTIF              </td>
+2019-03-21 20:19:01,378 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:19:01,379 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('NAUCID MD','TAB','Abbott','10'
+              ,'-','N.I','-','43.00');">
+              NAUCID MD              </td>
+2019-03-21 20:19:11,206 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:19:11,206 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('NEUROTEL','INJ','CARTEL LAB','1VIAL'
+              ,'-','N.I','-','22.00');">
+              NEUROTEL              </td>
+2019-03-21 20:19:20,540 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:19:20,540 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('NORPRIDE 100','','BCC HC.','10'
+              ,'-','N.I','-','86.00');">
+              NORPRIDE 100              </td>
+2019-03-21 20:19:36,776 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=42
+2019-03-21 20:20:03,598 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=43
+2019-03-21 20:20:12,452 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:20:12,453 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('OLMETIME-AMH 20','TAB','Mankind','10'
+              ,'-','N.I','-','85.00');">
+              OLMETIME-AMH 20              </td>
+2019-03-21 20:20:20,616 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:20:20,616 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ORIFLOAT','TAB','ORIAN PH.','10'
+              ,'-','N.I','-','65.00');">
+              ORIFLOAT              </td>
+2019-03-21 20:20:42,872 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=46
+2019-03-21 20:20:50,844 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:20:50,845 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('PARCIN-500','INJ','PARSHWA LIFE','-'
+              ,'-','N.I','-','-');">
+              PARCIN-500              </td>
+2019-03-21 20:21:01,467 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:21:01,468 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('PILON','OINT','Icpa','25G'
+              ,'-','N.I','-','24.00');">
+              PILON              </td>
+2019-03-21 20:21:16,915 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=49
+2019-03-21 20:21:31,000 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:21:31,001 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('PYROTROY 10ML','','Troikaa','10 MLV'
+              ,'-','N.I','-','99.00');">
+              PYROTROY 10ML              </td>
+2019-03-21 20:21:49,165 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=51
+2019-03-21 20:21:56,897 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:21:56,898 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('REISOX-SR','','RECURE ','10'
+              ,'-','N.I','-','50.00');">
+              REISOX-SR              </td>
+2019-03-21 20:22:09,037 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:22:09,038 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('E','GEL','Sun','3G'
+              ,'17 Beta Oestradiol','Hormones','0.06%W/W','10.20');">
+              E              </td>
+2019-03-21 20:22:16,572 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:22:16,572 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACECLO','TAB','Aristo','10'
+              ,'Aceclofenac','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100MG','19.39');">
+              ACECLO              </td>
+2019-03-21 20:22:26,247 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:22:26,248 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ECLONAC','TAB','Jagsonpal','10'
+              ,'Aceclofenac','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100MG','20.00');">
+              ECLONAC              </td>
+2019-03-21 20:22:50,339 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=56
+2019-03-21 20:23:00,541 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:23:00,541 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('MEDIDOL','TAB','MEDISTREAM','10'
+              ,'Aceclofenac','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100MG','N.I.');">
+              MEDIDOL              </td>
+2019-03-21 20:23:09,170 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:23:09,171 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACECLOZEBID','','AASHRAY','10*10'
+              ,'Aceclofenac,Paracetamol','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100,500;MG','29.00');">
+              ACECLOZEBID              </td>
+2019-03-21 20:23:22,482 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:23:22,483 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ASYMOL','TAB','Synapse','10'
+              ,'Aceclofenac,Paracetamol','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100,500;MG','22.50');">
+              ASYMOL              </td>
+2019-03-21 20:23:30,152 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:23:30,153 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('MOVACE-P','TAB','Alkem','10'
+              ,'Aceclofenac,Paracetamol','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100,500;MG','30.00');">
+              MOVACE-P              </td>
+2019-03-21 20:23:38,712 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:23:38,713 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACILEX-P','TAB','Lexus','100'
+              ,'Aceclofenac,Paracetamol','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100,500;NG','N.I.');">
+              ACILEX-P              </td>
+2019-03-21 20:23:59,655 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=62
+2019-03-21 20:24:22,434 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=63
+2019-03-21 20:24:52,335 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=64
+2019-03-21 20:25:03,321 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:25:03,322 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('DOLOKIND-AA','TAB','Mankind','10'
+              ,'ACECLOFENAC,SERRATIOPEPTIDASE,PARACETAMOL','Analgesics, Antipyretics &amp; Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)  ','100,15,325;MG','42.50');">
+              DOLOKIND-AA              </td>
+2019-03-21 20:25:16,721 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=66
+2019-03-21 20:25:31,137 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=67
+2019-03-21 20:25:45,158 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:25:45,159 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACFREE','GEL','Ochoa','15G'
+              ,'Adapalene','Acne Treatment','0.1%','74.90');">
+              ACFREE              </td>
+2019-03-21 20:26:00,731 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=69
+2019-03-21 20:26:19,360 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=70
+2019-03-21 20:26:31,852 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=71
+2019-03-21 20:26:40,078 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:26:40,079 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ALFACAL PLUS','CAP','Macleods','10'
+              ,'Alfacalcidol,Elemental Calcium','Vitamins &amp;/or Minerals','0.25MCG,200MG','55.00');">
+              ALFACAL PLUS              </td>
+2019-03-21 20:26:51,469 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:26:51,469 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ALOEKIN','LOT','Liva Hc.','50ML'
+              ,'Aloe Extract,Vit.E','Burns, Eczema, and Psoriasis','N.I.','110.00');">
+              ALOEKIN              </td>
+2019-03-21 20:27:10,955 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:27:10,955 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ALEEZ','TAB','Alde Medi.','20'
+              ,'Alprazolam','Anti Anxiety','0.25MG','8.00');">
+              ALEEZ              </td>
+2019-03-21 20:27:30,321 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=75
+2019-03-21 20:27:36,452 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:27:36,453 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('LUZARN','TAB','Emcure','10'
+              ,'Alprazolam','Anti Anxiety','0.5 MG','14.00');">
+              LUZARN              </td>
+2019-03-21 20:27:46,868 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:27:46,869 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AMBULAX-M','TAB','Unimarck','10'
+              ,'Alprazolam,Propranolol Hcl.','Anti Anxiety','0.25,10;MG','19.80');">
+              AMBULAX-M              </td>
+2019-03-21 20:27:54,523 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:27:54,524 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AMBSOL','SYR','Chemech','100ML'
+              ,'Ambroxol Hcl.,Salbutamol','Cough &amp; Cold Preparations','15,1;MG/5ML','32.00');">
+              AMBSOL              </td>
+2019-03-21 20:28:05,133 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:28:05,134 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AMCASE','INJ','Hi-Tec','V.'
+              ,'Amikacin','Antibiotics','100/200;MG','16.00/30.00');">
+              AMCASE              </td>
+2019-03-21 20:28:23,869 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=80
+2019-03-21 20:28:47,360 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=81
+2019-03-21 20:29:02,361 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=82
+2019-03-21 20:30:50,984 - __main__ - INFO - Start
+2019-03-21 20:30:50,986 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:30:50,987 - __main__ - INFO - finished
+2019-03-21 20:31:06,502 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:31:06,503 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:31:16,086 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:31:16,087 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:36:38,767 - __main__ - INFO - Start
+2019-03-21 20:36:38,770 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:36:38,770 - __main__ - INFO - finished
+2019-03-21 20:37:05,960 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=1
+2019-03-21 20:37:16,237 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:37:16,238 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:37:58,904 - __main__ - INFO - Start
+2019-03-21 20:37:58,908 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:37:58,908 - __main__ - INFO - finished
+2019-03-21 20:38:07,893 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:38:07,893 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:38:15,454 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:38:15,455 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:38:42,613 - __main__ - INFO - Start
+2019-03-21 20:38:42,616 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:38:42,616 - __main__ - INFO - finished
+2019-03-21 20:38:50,649 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:38:50,650 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:39:00,862 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 60, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:39:00,863 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:39:47,597 - __main__ - INFO - Start
+2019-03-21 20:39:47,602 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:39:47,602 - __main__ - INFO - finished
+2019-03-21 20:40:01,009 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=1
+2019-03-21 20:40:20,910 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=2
+2019-03-21 20:40:44,056 - __main__ - INFO - Start
+2019-03-21 20:40:44,060 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:40:44,061 - __main__ - INFO - finished
+2019-03-21 20:41:00,431 - __main__ - ERROR - failed to requests: http://www.way2healthcare.com/way2medicine?&per_page=1
+2019-03-21 20:42:35,889 - __main__ - INFO - Start
+2019-03-21 20:42:35,893 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:42:35,893 - __main__ - INFO - finished
+2019-03-21 20:46:16,795 - __main__ - INFO - Start
+2019-03-21 20:46:16,799 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:46:16,799 - __main__ - INFO - finished

@@ -12,7 +12,7 @@ def connection():
 def save(name,dosage,company,packing,molecule,category,strength,mrp):
         cli = connection()
 
-        coll = get_collection(cli, "india", "info")
+        coll = get_collection(cli, "india", "info_inpage")
 
         info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name",
                     "packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength",
@@ -108,13 +108,12 @@ class info_piece(dict):
 
 if __name__ == "__main__":
     cli = connection()
-    coll = get_collection(cli, "india", "info")
-    info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name",
-                    "packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength",
-                    "mrp_rs": "MRP(Rs)"}
+    coll = get_collection(cli, "india", "info_inpage")
+    info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name","packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength","mrp_rs": "MRP(Rs)"}
 
     india_model = info_model(coll, info_map)
-    india_model.duplicate_removal(execute=False)
+    india_model.get_piece(**info_map).save()
+    #india_model.duplicate_removal(execute=False)
 
 
 
