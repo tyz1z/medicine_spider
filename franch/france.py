@@ -72,7 +72,7 @@ if __name__ == '__main__':
     #with open(sava_path,'r') as f:
     #    idlist = json.loads(f.read())
     #    for i in idlist:
-    #        ws.add_task(france_task(i,ws))
+    #        ws.add_task(france_task(i,ws),0)
     #        
     #ws.run()
 

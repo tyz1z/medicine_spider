@@ -44,6 +44,34 @@ class info_model(object):
         p.set_dict(kw)
         return p
         
+    def duplicate_removal(self,execute = True):
+        reqMap = {}
+        for k,v in self.map.items():
+            reqMap[k] = "$"+v
+        agg = [{
+            "$group":{
+                "_id":reqMap,
+                "count":{"$sum":1},
+                "dups":{"$addToSet":'$_id'}
+                }
+            },{
+            "$match":{
+                "count":{"$gt":1}
+                }
+            }]
+        res = self.collection.aggregate(agg)
+        if execute:
+            for i in res:
+                i['dups'].pop()
+                self.collection.remove({"_id":{"_in":i['dups']}})
+        else:
+            c = 1
+            for i in res:
+                print("<"+str(c)+">"+" COUNT:"+str(i['count']))
+                print(i['_id'])
+                print(i['dups'])
+        
+        
 class info_piece(dict):
         def __init__(self,collection,map):
             self.collection = collection
@@ -77,21 +105,15 @@ class info_piece(dict):
 
 
 
+if __name__ == "__main__":
+    cli = connection()
+    coll = get_collection(cli, "india", "info")
+    info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name",
+                    "packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength",
+                    "mrp_rs": "MRP(Rs)"}
 
-
-#
-# cli = connection()
-#
-# coll = get_collection(cli,"india","info")
-#
-# info_map = {"brand_name":"Brand Name","dosage_form":"Dosage Form","company_name":"Company Name","packing":"Packaging","molecule":"Molecule","category":"Category","strength":"Strength","mrp_rs":"MRP(Rs)"}
-#
-# india_model = info_model(coll,info_map)
-# p = india_model.get_piece(brand_name="test_name",dosage_form="test_dosage",company_name="test_comp",packing="test_pack",molecule="test_mole",category="test_cate",strength="test_str",mrp_rs="test_mrp")
-#
-#
-# print(p)
-# p.save()
+    india_model = info_model(coll, info_map)
+    india_model.duplicate_removal(execute=False)
 
 
 
