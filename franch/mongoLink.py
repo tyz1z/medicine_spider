@@ -63,7 +63,7 @@ class info_model(object):
         if execute:
             for i in res:
                 i['dups'].pop()
-                self.collection.remove({"_id":{"_in":i['dups']}})
+                self.collection.remove({"_id":{"$in":i['dups']}})
         else:
             c = 1
             for i in res:
