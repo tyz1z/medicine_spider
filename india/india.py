@@ -4,6 +4,7 @@ import random
 import logging
 from httputil import get_response,return_soup
 from engine import workshop,base_task
+import re
 
 logger = logging.getLogger(__name__)
 logger.setLevel(level=logging.DEBUG)
@@ -22,7 +23,6 @@ logger.addHandler(file_handler)
 
 # Log
 logger.info('Start')
-
 
 def get_detail_url(html):
     detail_url_list = []
@@ -47,31 +47,22 @@ def check_next_page(soup):
 # should use url_list[6] for the test
     
 def deal(html):
+    pattern = re.compile(r'.*?medicine\(\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\);',re.S)
     soup = return_soup(html)
     tables = soup.select('#no-more-tables > table > tbody > tr > .cur_poi')
     for table in tables:
         try:
-            index = 1
-            while index <= 15:
-                item.append(table['onclick'].replace(',','').split('\'')[index])
-                index+=2
-            #mongoLink.save(*item)
-            print(*item)
-            item = []
+            result = re.findall(pattern, table['onclick'])
+            for i in result[0]:
+                i = i.replace(' ','').replace('\n','').replace('\t','').replace('\r','')
+            print(result[0])
+            mongoLink.save(*item)
+            print(*result[0])
         except Exception:
-            item = []
             logger.error('phrase error',exc_info=True)
             logger.info('phrase error,the origin tag is: '+str(table))
             return False
 
-
-# visit_detail_page('http://www.way2healthcare.com/way2medicine?&category=Antacids&per_page=39')
-# visit_detail_page(url_list[2])
-# visit_detail_page('http://www.way2healthcare.com/way2medicine?category=Insulin%20Preparations')
-# visit_detail_page('http://www.way2healthcare.com/way2medicine?&category=N.I&per_page=2')
-# print(mongoLink.save())
-#visit_detail_page('http://www.way2healthcare.com/way2medicine?name=INSUMAN%20RAPID')
-#
 
 class india_task(base_task):
     def __init__(self,url,*args,**kw):
@@ -83,27 +74,12 @@ class india_task(base_task):
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
-            self.ws.add_task(india_task(self.url))
+            self.ws.add_task(india_task(self.url,self.ws),0)
             return False
         succeed = deal(html)
-        if succeed:
-            next = check_next_page(soup)
-            self.ws.add_task
-        return succeed
-        
-    def retry(self):
-        print('now dealing with '+url)
-        # print(url)
-        item =[]
-        html = get_response(url)
-        if not html:
-            logger.error('failed to requests: '+url)
-            return False
-        succeed = deal(html)
-        if succeed:
-            next = check_next_page(soup)
-            self.ws.add_task
-        return succeed      
+        if not succeed:
+            self.ws.add_task(india_task(self.url,self.ws),0)
+        return succeed 
 
 def sleep_time():
     return random.randint(2,5)
@@ -113,11 +89,11 @@ def main():
     ws = workshop(1,sleep_time)
     for i in total_urls_list:
         ws.add_task(india_task(i,ws),0)
+    #ws.check()
+    ws.set_test_mode(5)
     ws.run()
-
+    
     logger.info('these should be figure out: ' + str(ws.failed_queue))
-#retry_timeout('http://www.way2healthcare.com/way2medicine?&per_page=135')
-
     logger.info('finished')
 
 if __name__ == '__main__':

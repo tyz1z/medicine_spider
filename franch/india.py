@@ -24,7 +24,6 @@ logger.addHandler(file_handler)
 # Log
 logger.info('Start')
 
-
 def get_detail_url(html):
     detail_url_list = []
     soup = return_soup(html)
@@ -57,7 +56,7 @@ def deal(html):
             for i in result[0]:
                 i = i.replace(' ','').replace('\n','').replace('\t','').replace('\r','')
             print(result[0])
-            #mongoLink.save(*item)
+            mongoLink.save(*item)
             print(*result[0])
         except Exception:
             logger.error('phrase error',exc_info=True)
@@ -71,34 +70,16 @@ class india_task(base_task):
         super(india_task,self).__init__(*args,**kw)
         
     def run(self):
-        #print("run")
         item =[]
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
-            self.ws.add_task(india_task(self.url,this.ws),0)
+            self.ws.add_task(india_task(self.url,self.ws),0)
             return False
         succeed = deal(html)
-        if succeed:
-            next = check_next_page(soup)
-            if next!=False:
-                self.ws.add_task(india_task(next,this.ws),0)
-        return succeed
-        
-    def retry(self):
-        print('now dealing with '+url)
-        # print(url)
-        item =[]
-        html = get_response(url)
-        if not html:
-            logger.error('failed to requests: '+url)
-            return False
-        succeed = deal(html)
-        if succeed:
-            next = check_next_page(soup)
-            if next!=False:
-                self.ws.add_task(india_task(next,this.ws),0)
-        return succeed      
+        if not succeed:
+            self.ws.add_task(india_task(self.url,self.ws),0)
+        return succeed 
 
 def sleep_time():
     return random.randint(2,5)
