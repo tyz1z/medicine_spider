@@ -70,6 +70,7 @@ class info_model(object):
                 print("<"+str(c)+">"+" COUNT:"+str(i['count']))
                 print(i['_id'])
                 print(i['dups'])
+                c += 1
         
         
 class info_piece(dict):
