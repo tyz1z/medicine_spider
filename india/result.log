@@ -143,3 +143,78 @@ IndexError: list index out of range
 2019-03-19 09:43:46,576 - __main__ - INFO - these should be figure out: []
 2019-03-19 09:43:46,576 - __main__ - INFO - finished
 2019-03-19 09:44:35,715 - __main__ - INFO - Start
+2019-03-21 20:00:09,365 - __main__ - INFO - Start
+2019-03-21 20:00:31,172 - __main__ - INFO - Start
+2019-03-21 20:00:31,176 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:00:31,176 - __main__ - INFO - finished
+2019-03-21 20:00:36,164 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:00:36,165 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:00:42,815 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:00:42,816 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:03:01,395 - __main__ - INFO - Start
+2019-03-21 20:03:02,313 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:03:02,313 - __main__ - INFO - finished
+2019-03-21 20:03:09,664 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:03:09,665 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('','','',''
+              ,'','','','');">
+</td>
+2019-03-21 20:03:16,318 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:03:16,318 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('ACPIL FACE WASH','','FAIR DERMA','100ML'
+              ,'-','N.I','-','98.00');">
+              ACPIL FACE WASH              </td>
+2019-03-21 20:03:25,207 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    #mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:03:25,211 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AIRTEC FB 400 INH','','Glenmark','1 UNIT'
+              ,'-','N.I','N.I.','352.00');">
+              AIRTEC FB 400 INH              </td>
+2019-03-21 20:03:32,990 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    #mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:03:32,990 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('AMINOGEST ','CAP','Zuventus','10'
+              ,'-','N.I','-','51.00');">
+              AMINOGEST               </td>
+2019-03-21 20:03:39,051 - __main__ - ERROR - phrase error
+Traceback (most recent call last):
+  File "india.py", line 59, in deal
+    #mongoLink.save(*item)
+NameError: name 'item' is not defined
+2019-03-21 20:03:39,051 - __main__ - INFO - phrase error,the origin tag is: <td class="cur_poi" data-target="#myModal" data-title="Brand Name" data-toggle="modal" onclick="javascript:open_popup_medicine('APCIL 625','TAB','Juggat','10*6'
+              ,'-','N.I','-','1230.00');">
+              APCIL 625              </td>
+2019-03-21 20:04:20,825 - __main__ - INFO - Start
+2019-03-21 20:04:21,955 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:04:21,955 - __main__ - INFO - finished
+2019-03-21 20:05:32,982 - __main__ - INFO - Start
+2019-03-21 20:05:32,984 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:05:32,984 - __main__ - INFO - finished
+2019-03-21 20:06:16,613 - __main__ - INFO - Start
+2019-03-21 20:06:16,616 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:06:16,616 - __main__ - INFO - finished
+2019-03-21 20:06:41,125 - __main__ - INFO - Start
+2019-03-21 20:06:41,127 - __main__ - INFO - these should be figure out: []
+2019-03-21 20:06:41,127 - __main__ - INFO - finished
