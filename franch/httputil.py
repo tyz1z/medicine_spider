@@ -16,11 +16,10 @@ def get_response(url):
             response = requests.get(url, headers=headers, timeout = 10)
             if response.status_code == 200:
                 return response.text
-            return
         except requests.exceptions.RequestException as e:
             logger.error(e)
             logger.info('requests error')
-    return
+    return False
 
 def post_response(url,data):
     for i in range(5):
@@ -28,11 +27,10 @@ def post_response(url,data):
             response = requests.post(url, data=data, headers=headers, timeout = 30)
             if response.status_code == 200:
                 return response.text
-            return
         except requests.exceptions.RequestException as e:
             logger.error(e)
             logger.info('requests error')
-    return
+    return False
           
           
 def return_soup(html):

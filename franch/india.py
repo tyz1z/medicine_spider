@@ -48,6 +48,7 @@ def check_next_page(soup):
     
 def deal(html):
     pattern = re.compile(r'.*?medicine\(\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\);',re.S)
+    #print(html)
     soup = return_soup(html)
     tables = soup.select('#no-more-tables > table > tbody > tr > .cur_poi')
     for table in tables:
@@ -55,42 +56,39 @@ def deal(html):
             result = re.findall(pattern, table['onclick'])
             for i in result[0]:
                 i = i.replace(' ','').replace('\n','').replace('\t','').replace('\r','')
-            print(result[0])
-            mongoLink.save(*item)
-            print(*result[0])
-        except Exception:
+            mongoLink.save(*result[0])
+        except Exception as e:
+            print(e)
             logger.error('phrase error',exc_info=True)
             logger.info('phrase error,the origin tag is: '+str(table))
             return False
+    return True
 
 
 class india_task(base_task):
-    def __init__(self,url,*args,**kw):
-        self.url = url
+    def __init__(self,page,*args,**kw):
+        self.url = "http://www.way2healthcare.com/way2medicine?&per_page="+str(page)
+        self.page = page
         super(india_task,self).__init__(*args,**kw)
         
     def run(self):
-        item =[]
         html = get_response(self.url)
         if not html:
             logger.error('failed to requests: '+self.url)
-            self.ws.add_task(india_task(self.url,self.ws),0)
             return False
         succeed = deal(html)
-        if not succeed:
-            self.ws.add_task(india_task(self.url,self.ws),0)
         return succeed 
 
 def sleep_time():
     return random.randint(2,5)
     
 def main():
-    total_urls_list = get_detail_url(get_response(origin_url))
     ws = workshop(1,sleep_time)
-    for i in total_urls_list:
-        ws.add_task(india_task(i,ws),0)
+    for i in range(666):
+        #print(i+1)
+        ws.add_task(india_task(i+1,ws),0)
     #ws.check()
-    ws.set_test_mode(5)
+    #ws.set_test_mode(2)
     ws.run()
     
     logger.info('these should be figure out: ' + str(ws.failed_queue))

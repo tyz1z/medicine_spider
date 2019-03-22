@@ -27,14 +27,18 @@ def get_drugs_and_save():
     pages = int(pages)
     idlist = []
     idlist += getids(first_html)
-    for i in range(4):
-        sleep(1)
-        origin_data['page'] = i+2
-        html = post_response(list_url,origin_data)
-        idlist += getids(html)
+    with open(sava_path,'a') as f:
+        for i in range(pages):
+            #sleep(1)
+            origin_data['page'] = i+1
+            html = post_response(list_url,origin_data)
+            #idlist += getids(html)
+            for j in getids(html):
+                f.write(j+',')
+            print(str(i+1)+"/"+str(pages))
     
-    with open(sava_path,'w') as f:
-        f.write(json.dumps(idlist))
+   
+           
 
 prefix = "http://agence-prd.ansm.sante.fr/php/ecodex/extrait.php?specid="
 
@@ -62,12 +66,12 @@ def sleep_time():
         
 if __name__ == '__main__':
     #TEST
-    html = ''
-    with open('page_model.html','r') as f:
-        html = f.read()
-    deal_info(html)
-    
-    #get_drugs_and_save()
+    #html = ''
+    #with open('page_model.html','r') as f:
+        #html = f.read()
+    #deal_info(html)
+
+    get_drugs_and_save()
     #ws = workshop(1,sleep_time)
     #with open(sava_path,'r') as f:
     #    idlist = json.loads(f.read())
