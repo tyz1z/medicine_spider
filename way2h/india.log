@@ -1,0 +1,46 @@
+2019-03-23 23:09:55 [py.warnings] WARNING: c:\anaconda3\lib\site-packages\scrapy\spidermiddlewares\offsite.py:59: URLWarning: allowed_domains accepts only domains, not URLs. Ignoring URL entry http://www.way2healthcare.com in allowed_domains.
+  warnings.warn("allowed_domains accepts only domains, not URLs. Ignoring URL entry %s in allowed_domains." % domain, URLWarning)
+
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=98>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=94>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=97>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=99>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=100>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=96>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=101>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=95>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=103>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=102>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=104>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=105>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=106>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=107>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=109>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=108>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=111>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=110>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=112>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:23:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://www.way2healthcare.com/way2medicine?&per_page=113>: An error occurred while connecting: 10065: 套接字操作尝试一个无法连接的主机。.
+2019-03-23 23:39:12 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('B
+2019-03-23 23:39:13 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('BIOCID 
+2019-03-23 23:39:13 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','0.5
+2019-03-23 23:39:13 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','1
+2019-03-23 23:39:13 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('BD PRECISION GLIDE','NEEDLES','B.D.','1.5
+2019-03-23 23:40:08 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DELTA-LITE CONF.','','J.&J.','5
+2019-03-23 23:40:08 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DELTA-LITE CONF.','','J.&J.','4
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','4
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5
+2019-03-23 23:40:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DURALITE','SPLINT','Chpl','5
+2019-03-23 23:41:01 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('GANGADHAR CHURNA 
+2019-03-23 23:43:49 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DELTA-LITE','TAPE','J.&J.','* 4Y'
+              ,'N.I.
+2019-03-23 23:43:49 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('DELTA-LITE','TAPE','J.&J.','* 4Y'
+              ,'N.I.
+2019-03-23 23:44:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('INSUMAN BASAL 
+2019-03-23 23:44:11 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('INSUMAN RAPID 
+2019-03-23 23:53:06 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('INSUMAN COMB 
+2019-03-23 23:53:06 [india] WARNING: failed to parse the tag javascript:open_popup_medicine('INSUMAN COMB 
