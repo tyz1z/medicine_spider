@@ -1,5 +1,5 @@
 import requests
-import mongoLink
+from mongoLink import connection,get_collection,info_model
 import random
 import logging
 from httputil import get_response,return_soup
@@ -45,6 +45,16 @@ def check_next_page(soup):
     return False
         
 # should use url_list[6] for the test
+
+cli = connection()
+coll = get_collection(cli, "india", "info_div50_1")  
+info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name":"Company Name","packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength","mrp_rs": "MRP(Rs)"}
+
+india_model = info_model(coll, info_map)
+  
+def save(name,dosage,company,packing,molecule,category,strength,mrp):
+    p = india_model.get_piece(brand_name=name, dosage_form=dosage, company_name=company,packing=packing, molecule=molecule, category=category, strength=strength,mrp_rs=mrp)
+    p.save()   
     
 def deal(html):
     pattern = re.compile(r'.*?medicine\(\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\,\'(.*?)\'.*?\);',re.S)
@@ -56,14 +66,13 @@ def deal(html):
             result = re.findall(pattern, table['onclick'])
             for i in result[0]:
                 i = i.replace(' ','').replace('\n','').replace('\t','').replace('\r','')
-            mongoLink.save(*result[0])
+            save(*result[0])
         except Exception as e:
             print(e)
             logger.error('phrase error',exc_info=True)
             logger.info('phrase error,the origin tag is: '+str(table))
             return False
     return True
-
 
 class india_task(base_task):
     def __init__(self,page,*args,**kw):
@@ -84,11 +93,10 @@ def sleep_time():
     
 def main():
     ws = workshop(1,sleep_time)
-    for i in range(666):
-        #print(i+1)
+    for i in range(50):
         ws.add_task(india_task(i+1,ws),0)
     #ws.check()
-    #ws.set_test_mode(2)
+    #ws.set_test_mode(50)
     ws.run()
     
     logger.info('these should be figure out: ' + str(ws.failed_queue))

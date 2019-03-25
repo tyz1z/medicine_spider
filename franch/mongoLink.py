@@ -9,25 +9,6 @@ def connection():
     cli = pymongo.MongoClient("mongodb://%s:%s@%s:%s/" % (uname,pwd,ip,port))
     return cli
 
-def save(name,dosage,company,packing,molecule,category,strength,mrp):
-        cli = connection()
-
-        coll = get_collection(cli, "india", "info_inpage")
-
-        info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name",
-                    "packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength",
-                    "mrp_rs": "MRP(Rs)"}
-
-        india_model = info_model(coll, info_map)
-
-        p = india_model.get_piece(brand_name=name, dosage_form=dosage, company_name=company,
-                                  packing=packing, molecule=molecule, category=category, strength=strength,
-                                  mrp_rs=mrp)
-
-        #print(p)
-        p.save()
-        #print('save over')
-
 # cli = pymongo.MongoClient("mongodb://%s:%s@%s:%s/" % (uname,pwd,ip,port))
 # dbs = cli.list_database_names()
 
@@ -108,12 +89,12 @@ class info_piece(dict):
 
 if __name__ == "__main__":
     cli = connection()
-    coll = get_collection(cli, "india", "info_inpsaasaage")
+    coll = get_collection(cli, "india", "debug_info")
     info_map = {"brand_name": "Brand Name", "dosage_form": "Dosage Form", "company_name": "Company Name","packing": "Packaging", "molecule": "Molecule", "category": "Category", "strength": "Strength","mrp_rs": "MRP(Rs)"}
 
     india_model = info_model(coll, info_map)
-    india_model.get_piece(**info_map).save()
-    #india_model.duplicate_removal(execute=False)
+    #india_model.get_piece(**info_map).save()
+    india_model.duplicate_removal(execute=False)
 
 
 
