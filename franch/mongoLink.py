@@ -84,9 +84,6 @@ class info_piece(dict):
                 sav_dict[v] = self.data[k]
             self.collection.insert(sav_dict)
 
-
-
-
 if __name__ == "__main__":
     cli = connection()
     coll = get_collection(cli, "india", "debug_info")

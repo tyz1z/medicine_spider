@@ -64,6 +64,7 @@ def deal(html):
             logger.error('phrase error',exc_info=True)
             logger.info('phrase error,the origin tag is: '+str(table))
             return False
+    return True
 
 
 class india_task(base_task):
