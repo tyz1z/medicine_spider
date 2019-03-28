@@ -1,7 +1,9 @@
-from threading import Thread
+from threading import Thread,Lock
 from tqdm import tqdm
 from time import sleep
 import logging
+
+__lock__ = Lock()
 
 logger = logging.getLogger(__name__)
 logger.setLevel(level=logging.DEBUG)
@@ -67,9 +69,15 @@ class workshop(object):
                 self.__task_limit__ -= 1
             else:
                 return False,False
-        if len(self.queue) != 0:
-            return self.iter.__next__(),0
-        elif len(self.failed_queue) != 0:
+        __lock__.acquire()
+        try:
+            task = self.iter.__next__()
+            return task,0
+        except Exception as e:
+            return False,False
+        finally:
+            __lock__.release()
+        if len(self.failed_queue) != 0:
             return self.failed_queue.pop(),1
         return False,False
         
@@ -92,7 +100,7 @@ class worker(Thread):
                 break
             succeed = current_task.real_run() #没有retry
             if not succeed:
-                logger.info(str(current_task.cause['token'])+":"+current_task.cause['info'])
+                logger.info(str(current_task.cause['token'])+" :"+current_task.cause['info'])
                 with open(self.ws.debug_failed_log_path,'a',encoding="utf-8") as f:
                     #记录失败凭证
                     f.write(str(current_task.cause['token'])+'\n')
