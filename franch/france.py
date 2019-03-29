@@ -9,8 +9,8 @@ from mongoLink import connection,get_collection,info_model
 list_url = "http://agence-prd.ansm.sante.fr/php/ecodex/index.php#result"
 origin_data ={"page":1,"cherche":1,"subsid":"","nomsubs":"","affliste":0,"listeOpen":0,"lstRecherche":"denomination","radLibelle":2,"txtCaracteres":"","txtDateDebut":"","txtDateFin":"","lstEtat":0,"lstComm":0,"lstDoc":0}
 
-html = post_response(list_url,origin_data)
-soup = return_soup(html)
+#html = post_response(list_url,origin_data)
+#soup = return_soup(html)
 
 sava_path = "list.json"
 
@@ -39,12 +39,21 @@ notice_prefix = "http://agence-prd.ansm.sante.fr/php/ecodex/notice/"
 def save_file(name,content):
     with open(name,'wb') as f:
         f.write(content)
+        
+def load_file(name):
+    try:
+        with open(name) as f:
+            return f.read()
+    except Exception as e:
+        return False
 
 def clear(html):
     html = re.sub(r"[\n|\r|\t]",'',html)
     html = re.sub(r"</*span.*?>","",html)
     html = re.sub(r"</*b.*?>","",html)
     html = re.sub(r"</*a.*?>","",html)
+    html = html.replace(' ','')
+    html = re.sub(r"&lt;",'',html)
     #html = html.replace('(','\(')
     #html = html.replace(')','\)')
     return html
@@ -180,16 +189,19 @@ def deal_rcp(html):
             data['FORME PHARMACEUTIQUE'] = p3
         
         p4 = {}
-        p4l = [ "Indications thérapeutiques{0,1}",   #excel里字段和实际匹配不一致
-                "Posologie et mode d'administration",
+        p4l = [ "Indications{0,1} thérapeutiques{0,1}",   #excel里字段和实际匹配不一致
+                "Posologie et mode d.administration",
                 "Contre-indications{0,1}",
                 "Mises en garde spéciales et précautions d'emploi",
-                "Mises en garde spéciales et précautions particulières d'emploi",
-                "Mises en garde et précautions particulières d'emploi",
-                "Interactions avec d.autres médicaments et autres formes d.interactions{0,1}",
-                "Grossesse et allaitement",
-                "Fertilité, grossesse et allaitement",
-                "Effets sur l'aptitude à conduire des véhicules et à utiliser des machines",
+                "Mises en garde spéciales et précautions particulières d.emploi",
+                "Mises en garde et précautions particulières d.emploi",
+                "Mises en garde spéciales et précautions particulières d.utilisation",
+                "Interactions{0,1} avec d.autres médicaments et autres formes d.interactions{0,1}",
+                "Interactions avec d'autres médicaments ou autres formes d'interaction",
+                "Grossesse et [aA]llaitement",
+                "Fertilité, [gG]rossesse et allaitement",
+                "Effets sur l.aptitude à conduire des véhicules et à utiliser des machines",
+                "Effets sur l.aptitude à la conduite et à l'utilisation de machines",
                 "Effets indésirables",
                 "Surdosage"
                 ]
@@ -200,21 +212,25 @@ def deal_rcp(html):
                 "Mises en garde spéciales et précautions d'emploi",
                 "Mises en garde spéciales et précautions particulières d'emploi",
                 "Mises en garde et précautions particulières d'emploi",
-                "Interactions avec d'autres médicaments et autres formes d'interaction",
+                "Mises en garde spéciales et précautions particulières d'utilisation",
+                "Interactions avec d'autres m.dicaments et autres formes d'interaction",
+                "Interactions avec d'autres médicaments ou autres formes d'interaction",
                 "Grossesse et allaitement",
                 "Fertilité, grossesse et allaitement",
                 "Effets sur l'aptitude à conduire des véhicules et à utiliser des machines",
+                "Effets sur l'aptitude à la conduite et à l'utilisation de machines",
                 "Effets indésirables",
                 "Surdosage"
                 ]
-        p4pat = r'(4\.\d+(\. | ){replace})[^),]{1,2}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
+        p4pat = r'(4\.\d+(\. | ) *{replace})[^\.:),]{1,7}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
         for k,name in zip(p4l,p4l_name):
-            #nextpat = r"(4\.\d+(\. | )Interactions avec d'autres médicaments et autres formes d'interactions{0,1})[^),](/a>){0,1}[^),]/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]"
+            #nextpat = r"(4\.\d+(\. | ) *Interactions{0,1} avec d.autres m.dicaments et autres formes d.interactions{0,1})[^\.:),]{1,7}/p>(.*?)<p class=\"{0,1}AmmAnnexeTitre[1|2]"
+            #nextpat = "dicaments "
             nextpat = p4pat.replace("{replace}",k)
             #nextpat = k
             t = re.findall(nextpat,html)
             if t != []:
-                #print(t[0][0])
+                print(t[0][0])
                 v = dig_inner_layer_1(name,t[0][2])
                 p4[name] = v
         if len(p4) == 9:
@@ -223,20 +239,22 @@ def deal_rcp(html):
             raise workshopRuntimeException("rcp_p4 resolve error")
        
         p5 = {}
-        p5l = [ "Propriétés pharmacodynamiques{0,1}",
+        p5l = [ "Propriétés{0,1} pharmacodynamiques{0,1}",
                 "Propriétés pharmacocinétiques{0,1}",
-                "Données de sécurité préclinique[s]{0,1}"
+                "Données de sécurité préclinique[s]{0,1}",
+                "Données de sécurité pré-cliniques"
                 ]
                 
         p5l_name = [ "Propriétés pharmacodynamiques",
                 "Propriétés pharmacocinétiques",
+                "Données de sécurité préclinique",
                 "Données de sécurité préclinique"
                 ]
-        p5pat = r'(5\.\d+(\. | ){replace})[^),]{1,2}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
+        p5pat = r'(5\.\d+(\. | ) *{replace})[^\.:),]{1,7}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
         for k,name in zip(p5l,p5l_name):
             t = re.findall(p5pat.replace("{replace}",k),html)
             if t != []:
-                #print(t[0][0])
+                print(t[0][0])
                 v = dig_inner_layer_1(name,t[0][2])
                 p5[name] = v
             
@@ -250,14 +268,15 @@ def deal_rcp(html):
                 "Incompatibilités{0,1}",
                 "Durée de conservation",
                 "Précautions particulières de conservation",
-                "Nature et contenu de l'emballage extérieur",
+                "Nature et contenu de l.emballage extérieur",
                 "Nature et contenance du récipient",
                 "Précautions particulières d[^e]*?élimination et de manipulation",
-                "Instructions pour l'utilisation et la manipulation",
-                "Instructions pour l'utilisation et la manipulation, et l'élimination",
-                "Instructions pour l'utilisation {0,1}, la manipulation et l'élimination",
-                "Instructions pour l'utilisation et la manipulation et l'élimination",
-                "Mode d'emploi, instructions concernant la manipulation"
+                "Instructions pour l.utilisation et la manipulation",
+                "Instructions pour l.utilisation et la manipulation, et l.élimination",
+                "Instructions pour l.utilisation {0,1}, la manipulation et l.élimination",
+                "Instructions pour l.utilisation et la manipulation et l.élimination",
+                "Mode d'emploi, instructions concernant la manipulation",
+                "Précautions particulières d.élimination"
                 ]
                 
         p6l_name = [ "Liste des excipients",
@@ -271,16 +290,18 @@ def deal_rcp(html):
                 "Instructions pour l'utilisation et la manipulation, et l'élimination",
                 "Instructions pour l'utilisation, la manipulation et l'élimination",
                 "Instructions pour l'utilisation et la manipulation et l'élimination",
-                "Mode d'emploi, instructions concernant la manipulation"
+                "Mode d'emploi, instructions concernant la manipulation",
+                "Précautions particulières d’élimination"
                 ]
-        p6pat = r'(6\.\d+(\. | ){replace})[^),]{1,2}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
+        p6pat = r'(6\.\d+(\. | ) *{replace})[^\.:),]{1,7}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
         for k,name in zip(p6l,p6l_name):
-            #nextpat = r'(6\.\d+(\. | )Liste des excipients{0,1})[^),](/a>){0,1}[^),]{0,1}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
+            #nextpat = r"6.1       Liste des excipients"
+            #nextpat = r'(6\.\d+(\. | ) *Instructions pour l\'utilisation et la manipulation et l\'élimination)[^\.:),]{1,5}/p>(.*?)<p class="{0,1}AmmAnnexeTitre[1|2]'
             nextpat = p6pat.replace("{replace}",k)
             #print(nextpat)
             t = re.findall(nextpat,html)
             if t != []:
-                #print(t[0][0])
+                print(t[0][0])
                 v = dig_inner_layer_1(name,t[0][2])
                 p6[name] = v
         if len(p6) == 6:
@@ -342,8 +363,9 @@ def deal_notice(html):
     if p0 != []:
         data["Liste complète des substances actives et des excipients"] = dig_inner_layer_1("Liste complète des substances actives et des excipients",p0[0])
     
-    p1 = re.findall(r'Dénomination du médicament(.*?)<p class="{0,1}AmmNoticeTitre1',html)[0]
-    data["Dénomination du médicament"] = format_piece(p1)
+    p1 = re.findall(r'Dénomination du médicament(.*?)<p class="{0,1}AmmNoticeTitre1',html)
+    if p1 != []:
+        data["Dénomination du médicament"] = dig_inner_layer_1("Dénomination du médicament",p1[0])
     
     p2 = re.findall(r'ANSM - Mis à jour le : (.*?)<',html)
     if p2 != []:
@@ -427,17 +449,21 @@ def info_front(html,id):
     h8,h9,p8,p9 = "","","",""
     
     if p8link != "":
-        h8 = get_response(p8link,get_bytes = True)
-        save_file("./rcp/"+str(id)+".html",h8)
-        #p8 = deal_rcp(h8)
+        h8 = get_response(p8link)
+        #save_file("./rcp/"+str(id)+".html",h8)
+        #h8 = load_file("./rcp/"+str(id)+".html")
+        if h8 != False:
+            p8 = deal_rcp(h8)
         
     if p9link != "":
-        h9 = get_response(p9link,get_bytes = True)
-        save_file("./notice/"+str(id)+".html",h9)
-        #p9 = deal_notice(h9)
+        h9 = get_response(p9link)
+        #save_file("./notice/"+str(id)+".html",h9)
+        #h9 = load_file("./notice/"+str(id)+".html")
+        if h8 != False:
+            p9 = deal_notice(h9)
     
-    #data['rcp'] = p8
-    #data['notice'] = p9
+    data['rcp'] = p8
+    data['notice'] = p9
     
     #print(data)
     #mod.get_piece(**data).save()
@@ -484,7 +510,7 @@ def single(i):
     
 if __name__ == '__main__':
     #get_drugs_and_save()
-    #single(60117759 )
+    #single(64467657)
     #load_from_failed()
     main()
     #mod.duplicate_removal(execute = False)
